@@ -1,0 +1,70 @@
+<% if (search.length === 1) { %>
+
+    <!-- Pass this drink as a variable as JS Object to the included file (it will be redirected there) -->
+    <%- include("cocktail.ejs", { cocktail: search[0] }) %> 
+
+<% } else { %>
+
+    <div id="search-result">
+        
+        <div id="search-cocktails">
+            <!-- `(drinksPerPage * currentPage)` to keep up each page with drink indexes otherwise for ex 2n page startDrink wld be 15 and drinksPerPage 15 also which would be a problem and the for loop wont be accessed -->
+            <% for (let count=startDrink; count < (drinksPerPage * currentPage); count++) { %>
+                <% if (search[count]) { %>
+                    <form action="/cocktail" method="post">
+                        <input type="hidden" name="drinkID" value="<%= search[count].idDrink %>">
+                        <button type="submit" title="<%= search[count].strDrink %>">
+                            <img src="<%= search[count].strDrinkThumb %>" alt="drink image">
+                            <h3>
+                                <%= search[count].strDrink %>
+                            </h3>
+                        </button>
+                    </form>
+                <% } %>            
+            <% } %>
+        </div>
+
+        <div id="search-pages">
+
+            <form action="/search" method="post">
+                <!-- send the search query back to fetch same result in js file -->
+                <input type="hidden" name="search" value="<%= searchQuery %>">
+                <!-- send the new current page to keep up with displaying page numbers -->
+                <input type="hidden" name="page" value="<%= currentPage - 1 %>">
+                <% if (currentPage === 1) { %>
+                    <p> < </p>
+                <% } else { %>
+                    <button type="submit"> < </button>
+                <% } %>
+            </form>
+            
+            <% for (let index = 1; index <= totalPages; index++) { %>
+                <form action="/search" method="post">
+                    <input type="hidden" name="search" value="<%= searchQuery %>">
+                    <input type="hidden" name="page" value="<%= index %>">
+                    <% if (currentPage === index) { %>
+                        <p class="current-page"> <%= index %> </p>
+                    <% } else { %>
+                        <button type="submit">
+                            <%= index %>
+                        </button>
+                    <% } %>
+                    
+                </form>
+            <% } %>
+
+            <form action="/search" method="post">
+                <input type="hidden" name="search" value="<%= searchQuery %>">
+                <input type="hidden" name="page" value="<%= currentPage + 1 %>">
+                <% if (currentPage === totalPages) { %>
+                    <p> > </p>
+                <% } else { %>
+                    <button type="submit"> > </button>
+                <% } %>
+            </form>
+
+        </div>
+        
+    </div>
+
+<% } %>

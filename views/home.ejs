@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+
+<% if (locals.notFoundMessage) { %>
+
+    <div class="container">
+        <div id="unavailable">
+            <h2><%= notFoundMessage %></h2>
+        </div>
+    </div>
+
+<% } else if (locals.search) { %>
+
+    <%- include("search.ejs") %>
+    
+<% } else if (locals.cocktail) { %>
+
+    <%- include("cocktail.ejs") %>
+
+<% } else { %>
+
+    <div class="container">
+        <form id="random-form" action="/random" method="post">
+            <input id="random" type="submit" value="Surprise Drink">
+        </form>
+    </div>
+
+<% } %>
+
+
+<%- include('partials/footer.ejs') %>

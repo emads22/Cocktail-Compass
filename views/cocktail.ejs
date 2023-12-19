@@ -1,0 +1,32 @@
+<div id="cocktail">
+
+    <div id="cocktail-title">
+        <h2> <%= cocktail.strDrink %> </h2>
+    </div>
+
+    <a href="<%= cocktail.strDrinkThumb %>" target="_blank" rel="noopener noreferrer">
+        <img src="<%= cocktail.strDrinkThumb %>" alt="cocktail image" id="cocktail-image">
+    </a>
+
+    <ul id="cocktail-data">
+        <li>Name: <span> <%= cocktail.strDrink %> </span> </li>
+        <li>Type: <span> <%= cocktail.strAlcoholic %> </span> </li>
+        <li>Tags: <span> <%= (cocktail.strTags) ? cocktail.strTags : "N/A" %> </span> </li>
+        <li>Category: <span> <%= cocktail.strCategory %> </span> </li>
+        <li>Glass: <span> <%= cocktail.strGlass %> </span> </li>
+        <li>Ingredients: 
+            <ul id="cocktail-ingredients">
+                <% for (let i=1; i<=15; i++) { %> 
+                    <% if (cocktail["strIngredient"+i] !== null && cocktail["strIngredient"+i] !== "\n" && cocktail["strIngredient"+i] !== "") { %>
+                        <% let ofPreposition = (cocktail["strMeasure"+i] !== null && cocktail["strMeasure"+i] !== "\n" && cocktail["strMeasure"+i] !== "") ? "of" : ""; %>
+                        <li> <%= cocktail["strMeasure"+i] %> <%= ofPreposition %> <%= cocktail["strIngredient"+i] %> </li>
+                    <% } else { %>
+                        <% break; %>
+                    <% } %> 
+                <% } %>
+            </ul>
+        </li>
+        <li>Instructions: <p> <%= (cocktail.strInstructions === null) ? "N/A" : cocktail.strInstructions %> </p> </li>
+    </ul>
+
+</div>
