@@ -1,15 +1,17 @@
-# 🍸 Cocktail✦Compass 🧭
+# 🍸 Cocktail✦Compass API 🧭
+
+Welcome to Cocktail✦Compass API — your ultimate destination for exploring the world of mixology through programmable endpoints! Discover an extensive collection of cocktails tailored to your preferences, whether you're integrating cocktail data into your app or exploring new drink possibilities.
+
+🔍 Seamlessly search through a diverse range of drink names, ingredients, or categories to find cocktails that match your exact taste profile, ensuring there's something for everyone.
+
+🎉 Feeling adventurous? Dive into the excitement with our 'Surprise Drink' endpoint! Experience the thrill of discovering a unique cocktail, complete with detailed recipes and captivating imagery. It's a journey of surprise and delight with every API call.
+
+Cocktail✦Compass API offers an engaging and immersive experience for developers and cocktail enthusiasts alike, providing the tools to integrate mixology data into your applications effortlessly.
+
+Cheers to endless discoveries and delightful sips with every API request! 🥂✨
 
 ## Overview
-Welcome to Cocktail✦Compass — your ultimate destination for exploring the world of mixology! Discover an extensive collection of cocktails tailored to your preferences, whether you're searching for a specific drink or ready to embark on a journey of taste exploration.
-
-🔍 Seamlessly search through a diverse range of drink names to find cocktails that match your exact taste profile, ensuring there's something for everyone.
-
-🎉 Feeling adventurous? Dive into the excitement with our 'Surprise Drink' button! Experience the thrill of discovering a unique cocktail, complete with detailed recipes and captivating imagery. It's a journey of surprise and delight with every click.
-
-Cocktail✦Compass offers an engaging and immersive experience for cocktail enthusiasts, whether you're a seasoned mixologist or a curious newcomer.
-
-Cheers to endless discoveries and delightful sips with every click! 🥂✨
+This application was developed as part of my [**The Complete 2024 Web Development Bootcamp**](https://www.udemy.com/course/the-complete-web-development-bootcamp/?couponCode=KEEPLEARNING) **`Section 29 - Capstone Project`** in 2023. It offers seamless access to an extensive database of cocktails. Whether you're integrating cocktail data into your app, exploring drink possibilities, or simply satisfying your mixology curiosity, Cocktail✦Compass API provides the tools you need.
 
 ## Features
 1. **Drink Exploration**
