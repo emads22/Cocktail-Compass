@@ -1,5 +1,7 @@
 # 🍸 Cocktail✦Compass 🧭
 
+![Cocktail_Compass_logo](./public/images/Cocktail_Compass_logo.png)
+
 Welcome to Cocktail✦Compass — your ultimate destination for exploring the world of mixology! Discover an extensive collection of cocktails tailored to your preferences, whether you're integrating cocktail data into your app or exploring new drink possibilities.
 
 🔍 Seamlessly search through a diverse range of drink names, ingredients, or categories to find cocktails that match your exact taste profile, ensuring there's something for everyone.
